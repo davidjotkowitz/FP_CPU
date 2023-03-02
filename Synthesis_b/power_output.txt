@@ -1,0 +1,262 @@
+****************************************
+Report : power
+        -analysis_effort low
+Design : RISC_V_Top_FP
+Version: R-2020.09-SP2
+Date   : Mon Jan 10 10:10:47 2022
+****************************************
+
+
+Library(s) Used:
+
+    tsl18fs120_typ (File: /tools/kits/tower/PDK_TS18SL/FS120_STD_Cells_0_18um_2005_12/DW_TOWER_tsl18fs120/2005.12/synopsys/2004.12/models/tsl18fs120_typ.db)
+
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+RISC_V_Top_FP          140000            tsl18fs120_typ
+Instruction_Fetch_FP   ForQA             tsl18fs120_typ
+Branch_Resolution_Unit 4000              tsl18fs120_typ
+Hazard_Detection_Unit  ForQA             tsl18fs120_typ
+Instruction_Decode_FP  16000             tsl18fs120_typ
+Control_Unit_FP        ForQA             tsl18fs120_typ
+Execution_Unit_FP      70000             tsl18fs120_typ
+Memory_Unit_FP         35000             tsl18fs120_typ
+Forwarding_Unit        4000              tsl18fs120_typ
+Instructions_Memory_FP ForQA             tsl18fs120_typ
+Arithmetic_Logic_Unit_FP
+                       70000             tsl18fs120_typ
+Data_Memory            35000             tsl18fs120_typ
+FADD_0                 4000              tsl18fs120_typ
+FSUB_0                 4000              tsl18fs120_typ
+FMUL_0                 4000              tsl18fs120_typ
+FDIV_0                 35000             tsl18fs120_typ
+FCMP                   4000              tsl18fs120_typ
+FMIN_MAX               4000              tsl18fs120_typ
+FSQRT                  35000             tsl18fs120_typ
+FADD_1                 4000              tsl18fs120_typ
+FADD_2                 4000              tsl18fs120_typ
+FDIV_1                 35000             tsl18fs120_typ
+FMUL_1                 4000              tsl18fs120_typ
+FMUL_2                 4000              tsl18fs120_typ
+FSUB_1                 4000              tsl18fs120_typ
+Data_Memory_DW01_inc_0 ForQA             tsl18fs120_typ
+Arithmetic_Logic_Unit_FP_DW_cmp_0
+                       4000              tsl18fs120_typ
+Arithmetic_Logic_Unit_FP_DW_cmp_1
+                       4000              tsl18fs120_typ
+Arithmetic_Logic_Unit_FP_DW01_add_0_DW01_add_2
+                       4000              tsl18fs120_typ
+Arithmetic_Logic_Unit_FP_DW01_sub_0
+                       4000              tsl18fs120_typ
+FSQRT_DW01_inc_0_DW01_inc_1
+                       ForQA             tsl18fs120_typ
+FADD_1_DW01_inc_0_DW01_inc_2
+                       ForQA             tsl18fs120_typ
+FDIV_1_DW01_sub_0_DW01_sub_25
+                       ForQA             tsl18fs120_typ
+FMUL_1_DW01_inc_0_DW01_inc_3
+                       ForQA             tsl18fs120_typ
+FMUL_1_DW01_add_0_DW01_add_6
+                       ForQA             tsl18fs120_typ
+FMUL_2_DW01_inc_0_DW01_inc_4
+                       ForQA             tsl18fs120_typ
+FMIN_MAX_DW_cmp_0      ForQA             tsl18fs120_typ
+FCMP_DW01_cmp6_0       4000              tsl18fs120_typ
+FDIV_0_DW01_sub_0_DW01_sub_28
+                       ForQA             tsl18fs120_typ
+FMUL_0_DW01_inc_0_DW01_inc_5
+                       ForQA             tsl18fs120_typ
+FMUL_0_DW01_add_0_DW01_add_9
+                       ForQA             tsl18fs120_typ
+FADD_2_DW01_inc_0_DW01_inc_6
+                       ForQA             tsl18fs120_typ
+FADD_2_DW01_add_0_DW01_add_10
+                       4000              tsl18fs120_typ
+FADD_2_DW01_sub_22_DW01_sub_52
+                       4000              tsl18fs120_typ
+FADD_2_DW01_sub_23_DW01_sub_53
+                       ForQA             tsl18fs120_typ
+FADD_2_DW_cmp_19       ForQA             tsl18fs120_typ
+FADD_0_DW01_inc_0_DW01_inc_7
+                       ForQA             tsl18fs120_typ
+FADD_0_DW01_add_0_DW01_add_11
+                       4000              tsl18fs120_typ
+FADD_0_DW01_sub_22_DW01_sub_76
+                       4000              tsl18fs120_typ
+FADD_0_DW01_sub_23_DW01_sub_77
+                       ForQA             tsl18fs120_typ
+FADD_0_DW_cmp_19       ForQA             tsl18fs120_typ
+Branch_Resolution_Unit_DW01_add_0_DW01_add_12
+                       ForQA             tsl18fs120_typ
+Branch_Resolution_Unit_DW01_add_1_DW01_add_13
+                       ForQA             tsl18fs120_typ
+Branch_Resolution_Unit_DW01_add_2_DW01_add_14
+                       ForQA             tsl18fs120_typ
+FMUL_1_DW_mult_uns_0   4000              tsl18fs120_typ
+FMUL_0_DW_mult_uns_0_DW_mult_uns_1
+                       4000              tsl18fs120_typ
+FADD_1_DW01_sub_25     ForQA             tsl18fs120_typ
+FDIV_0_DW01_add_44     4000              tsl18fs120_typ
+FDIV_0_DW01_add_45     4000              tsl18fs120_typ
+FDIV_0_DW01_add_46     4000              tsl18fs120_typ
+FDIV_0_DW01_sub_1      4000              tsl18fs120_typ
+FDIV_0_DW01_add_103    4000              tsl18fs120_typ
+FDIV_0_DW01_add_104    4000              tsl18fs120_typ
+FDIV_0_DW01_add_110    4000              tsl18fs120_typ
+FDIV_0_DW01_add_111    4000              tsl18fs120_typ
+FDIV_0_DW01_add_117    4000              tsl18fs120_typ
+FDIV_0_DW01_add_118    4000              tsl18fs120_typ
+FDIV_0_DW01_add_124    4000              tsl18fs120_typ
+FDIV_0_DW01_add_125    4000              tsl18fs120_typ
+FDIV_0_DW01_add_131    4000              tsl18fs120_typ
+FDIV_0_DW01_add_132    4000              tsl18fs120_typ
+FDIV_0_DW01_add_138    4000              tsl18fs120_typ
+FDIV_0_DW01_add_139    4000              tsl18fs120_typ
+FDIV_0_DW01_add_145    4000              tsl18fs120_typ
+FDIV_0_DW01_add_146    4000              tsl18fs120_typ
+FDIV_0_DW01_add_157    4000              tsl18fs120_typ
+FMUL_2_DW01_add_1      ForQA             tsl18fs120_typ
+FADD_1_DW_cmp_21       4000              tsl18fs120_typ
+FADD_1_DW01_add_2      4000              tsl18fs120_typ
+FDIV_1_DW01_add_161    4000              tsl18fs120_typ
+FDIV_1_DW01_add_162    4000              tsl18fs120_typ
+FDIV_1_DW01_add_163    4000              tsl18fs120_typ
+FDIV_1_DW01_add_174    4000              tsl18fs120_typ
+FDIV_1_DW01_add_181    4000              tsl18fs120_typ
+FDIV_1_DW01_add_182    4000              tsl18fs120_typ
+FDIV_1_DW01_add_183    4000              tsl18fs120_typ
+FDIV_1_DW01_add_184    4000              tsl18fs120_typ
+FDIV_1_DW01_add_185    4000              tsl18fs120_typ
+FDIV_1_DW01_add_186    4000              tsl18fs120_typ
+FDIV_1_DW01_add_187    4000              tsl18fs120_typ
+FDIV_1_DW01_add_193    4000              tsl18fs120_typ
+FDIV_1_DW01_add_194    4000              tsl18fs120_typ
+FDIV_1_DW01_add_197    4000              tsl18fs120_typ
+FDIV_1_DW01_add_201    4000              tsl18fs120_typ
+FDIV_1_DW01_add_203    4000              tsl18fs120_typ
+FDIV_1_DW01_add_205    4000              tsl18fs120_typ
+FDIV_1_DW01_add_206    4000              tsl18fs120_typ
+FDIV_1_DW01_add_207    4000              tsl18fs120_typ
+FDIV_1_DW01_add_209    4000              tsl18fs120_typ
+FDIV_1_DW01_sub_2      4000              tsl18fs120_typ
+FDIV_1_DW01_add_214    4000              tsl18fs120_typ
+FDIV_1_DW01_add_228    4000              tsl18fs120_typ
+FDIV_1_DW01_add_277    4000              tsl18fs120_typ
+Branch_Resolution_Unit_DW01_cmp6_2
+                       4000              tsl18fs120_typ
+FDIV_0_DW01_add_159    ForQA             tsl18fs120_typ
+FDIV_0_DW01_add_160    4000              tsl18fs120_typ
+FDIV_0_DW01_add_161    4000              tsl18fs120_typ
+FDIV_0_DW01_add_162    4000              tsl18fs120_typ
+FDIV_0_DW01_add_163    4000              tsl18fs120_typ
+FDIV_0_DW01_add_164    4000              tsl18fs120_typ
+FDIV_0_DW01_add_165    4000              tsl18fs120_typ
+FDIV_0_DW01_add_166    4000              tsl18fs120_typ
+FDIV_0_DW01_add_167    4000              tsl18fs120_typ
+FDIV_0_DW01_add_168    ForQA             tsl18fs120_typ
+FDIV_0_DW01_add_169    4000              tsl18fs120_typ
+FDIV_0_DW01_add_170    4000              tsl18fs120_typ
+FDIV_0_DW01_add_171    4000              tsl18fs120_typ
+FDIV_0_DW01_add_172    4000              tsl18fs120_typ
+FDIV_0_DW01_add_173    4000              tsl18fs120_typ
+FDIV_0_DW01_add_174    4000              tsl18fs120_typ
+FDIV_0_DW01_add_175    4000              tsl18fs120_typ
+FDIV_0_DW01_add_177    ForQA             tsl18fs120_typ
+FDIV_0_DW01_add_178    4000              tsl18fs120_typ
+FDIV_0_DW01_add_179    4000              tsl18fs120_typ
+FDIV_0_DW01_add_180    4000              tsl18fs120_typ
+FDIV_0_DW01_add_181    4000              tsl18fs120_typ
+FDIV_0_DW01_add_182    4000              tsl18fs120_typ
+FDIV_0_DW01_add_183    4000              tsl18fs120_typ
+FDIV_0_DW01_add_184    4000              tsl18fs120_typ
+FDIV_0_DW01_add_185    4000              tsl18fs120_typ
+FDIV_0_DW01_add_186    4000              tsl18fs120_typ
+FDIV_0_DW01_add_187    4000              tsl18fs120_typ
+FDIV_0_DW01_add_188    4000              tsl18fs120_typ
+FDIV_0_DW01_add_189    4000              tsl18fs120_typ
+FDIV_0_DW01_add_190    4000              tsl18fs120_typ
+FDIV_0_DW01_add_191    4000              tsl18fs120_typ
+FDIV_0_DW01_add_192    4000              tsl18fs120_typ
+FDIV_0_DW01_add_193    4000              tsl18fs120_typ
+FDIV_0_DW01_add_194    4000              tsl18fs120_typ
+FDIV_0_DW01_add_195    4000              tsl18fs120_typ
+FDIV_0_DW01_add_196    4000              tsl18fs120_typ
+FDIV_0_DW01_add_197    4000              tsl18fs120_typ
+FDIV_0_DW01_add_198    4000              tsl18fs120_typ
+FDIV_0_DW01_add_199    4000              tsl18fs120_typ
+FDIV_0_DW01_add_200    ForQA             tsl18fs120_typ
+FDIV_0_DW01_add_201    4000              tsl18fs120_typ
+FADD_1_DW01_sub_32     4000              tsl18fs120_typ
+FDIV_1_DW01_add_497    4000              tsl18fs120_typ
+FDIV_1_DW01_add_508    ForQA             tsl18fs120_typ
+FDIV_1_DW01_add_534    4000              tsl18fs120_typ
+FDIV_1_DW01_add_538    4000              tsl18fs120_typ
+FDIV_1_DW01_add_539    4000              tsl18fs120_typ
+FDIV_1_DW01_add_543    4000              tsl18fs120_typ
+FDIV_1_DW01_add_544    4000              tsl18fs120_typ
+FDIV_1_DW01_add_547    4000              tsl18fs120_typ
+FDIV_1_DW01_add_548    4000              tsl18fs120_typ
+FDIV_1_DW01_add_550    4000              tsl18fs120_typ
+FDIV_1_DW01_add_551    4000              tsl18fs120_typ
+FDIV_1_DW01_add_552    4000              tsl18fs120_typ
+FDIV_1_DW01_add_553    4000              tsl18fs120_typ
+FDIV_1_DW01_add_554    4000              tsl18fs120_typ
+FDIV_1_DW01_add_556    ForQA             tsl18fs120_typ
+FDIV_1_DW01_add_557    4000              tsl18fs120_typ
+FDIV_1_DW01_add_558    4000              tsl18fs120_typ
+FDIV_1_DW01_add_562    4000              tsl18fs120_typ
+FDIV_1_DW01_add_564    4000              tsl18fs120_typ
+FDIV_1_DW01_add_565    4000              tsl18fs120_typ
+FDIV_1_DW01_add_566    4000              tsl18fs120_typ
+FDIV_1_DW01_add_572    4000              tsl18fs120_typ
+FDIV_1_DW01_add_573    4000              tsl18fs120_typ
+FDIV_1_DW01_add_574    4000              tsl18fs120_typ
+FDIV_1_DW01_add_575    4000              tsl18fs120_typ
+FDIV_1_DW01_add_578    4000              tsl18fs120_typ
+FDIV_1_DW01_add_580    4000              tsl18fs120_typ
+FDIV_1_DW01_add_581    4000              tsl18fs120_typ
+FDIV_1_DW01_add_585    4000              tsl18fs120_typ
+FDIV_1_DW01_add_587    4000              tsl18fs120_typ
+FDIV_1_DW01_add_590    4000              tsl18fs120_typ
+FDIV_1_DW01_add_592    4000              tsl18fs120_typ
+FDIV_1_DW01_add_595    4000              tsl18fs120_typ
+FDIV_1_DW01_add_598    4000              tsl18fs120_typ
+FDIV_1_DW01_add_599    4000              tsl18fs120_typ
+FDIV_1_DW01_add_600    4000              tsl18fs120_typ
+FMUL_2_DW_mult_uns_8   4000              tsl18fs120_typ
+FDIV_1_DW01_add_601    4000              tsl18fs120_typ
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  30.5327 mW   (90%)
+  Net Switching Power  =   3.2875 mW   (10%)
+                         ---------
+Total Dynamic Power    =  33.8201 mW  (100%)
+
+Cell Leakage Power     =   2.2477 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          28.5306        3.7978e-02        4.6768e+05           28.5690  (  84.47%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      2.0016            3.2495        1.7800e+06            5.2529  (  15.53%)
+--------------------------------------------------------------------------------------------------
+Total             30.5322 mW         3.2875 mW     2.2477e+06 pW        33.8219 mW

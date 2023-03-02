@@ -1,0 +1,467 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : RISC_V_Top_FP
+Version: R-2020.09-SP2
+Date   : Mon Jan 10 10:08:07 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tsl18fs120_typ   Library: tsl18fs120_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: destination_register_connect_EXE_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: IF_instance/pc_decision_making_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISC_V_Top_FP      140000                tsl18fs120_typ
+  Forwarding_Unit    4000                  tsl18fs120_typ
+  Execution_Unit_FP  70000                 tsl18fs120_typ
+  Arithmetic_Logic_Unit_FP
+                     70000                 tsl18fs120_typ
+  FDIV_0             35000                 tsl18fs120_typ
+  FDIV_0_DW01_add_167
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_103
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_111
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_117
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_125
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_132
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_161
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_146
+                     4000                  tsl18fs120_typ
+  FDIV_0_DW01_add_168
+                     ForQA                 tsl18fs120_typ
+  Instruction_Decode_FP
+                     16000                 tsl18fs120_typ
+  Branch_Resolution_Unit
+                     4000                  tsl18fs120_typ
+  Instruction_Fetch_FP
+                     ForQA                 tsl18fs120_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  destination_register_connect_EXE_reg[0]/CP (dfnrq4)     0.00 #     0.00 r
+  destination_register_connect_EXE_reg[0]/Q (dfnrq4)      0.30       0.30 f
+  FU_instance/destination_register_in_memStage[0] (Forwarding_Unit)
+                                                          0.00       0.30 f
+  FU_instance/U13/ZN (inv0d2)                             0.06       0.35 r
+  FU_instance/U8/ZN (inv0d1)                              0.04       0.39 f
+  FU_instance/U7/ZN (xn02d1)                              0.22       0.61 f
+  FU_instance/U12/ZN (nr13d2)                             0.13       0.74 f
+  FU_instance/U97/ZN (nd04d1)                             0.13       0.87 r
+  FU_instance/U98/ZN (nd04d1)                             0.10       0.97 f
+  FU_instance/U99/ZN (nr02d1)                             0.15       1.12 r
+  FU_instance/forwarded_data_source_for_rs2_in_EXEStage[0] (Forwarding_Unit)
+                                                          0.00       1.12 r
+  EXEU_instance/forward_of_ALU_or_mem_to_rs2[0] (Execution_Unit_FP)
+                                                          0.00       1.12 r
+  EXEU_instance/U98/ZN (inv0d1)                           0.05       1.17 f
+  EXEU_instance/U124/ZN (nd02d1)                          0.11       1.28 r
+  EXEU_instance/U126/ZN (inv0d2)                          0.03       1.31 f
+  EXEU_instance/U127/ZN (nd02d1)                          0.13       1.44 r
+  EXEU_instance/U11/ZN (inv0d4)                           0.07       1.51 f
+  EXEU_instance/U12/Z (buffda)                            0.16       1.67 f
+  EXEU_instance/U130/ZN (aoi22d1)                         0.16       1.83 r
+  EXEU_instance/U19/ZN (nd02d2)                           0.08       1.91 f
+  EXEU_instance/ALU_instance/second_operand[1] (Arithmetic_Logic_Unit_FP)
+                                                          0.00       1.91 f
+  EXEU_instance/ALU_instance/U33/ZN (invbd4)              0.11       2.02 r
+  EXEU_instance/ALU_instance/U104/ZN (invbdk)             0.11       2.14 f
+  EXEU_instance/ALU_instance/div_inst/second_operand[1] (FDIV_0)
+                                                          0.00       2.14 f
+  EXEU_instance/ALU_instance/div_inst/U521/ZN (inv0d7)
+                                                          0.21       2.35 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/B[1] (FDIV_0_DW01_add_167)
+                                                          0.00       2.35 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U284/Z (or02d0)
+                                                          0.19       2.54 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U204/ZN (aoi21d1)
+                                                          0.09       2.63 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U198/ZN (oai21d1)
+                                                          0.18       2.81 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U183/ZN (aoi21d1)
+                                                          0.10       2.90 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U177/ZN (oai21d1)
+                                                          0.18       3.08 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U142/ZN (aoi21d1)
+                                                          0.08       3.17 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U229/ZN (oai21d1)
+                                                          0.23       3.39 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U265/ZN (aoi21d1)
+                                                          0.10       3.49 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U96/ZN (oai21d1)
+                                                          0.18       3.67 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U81/ZN (aoi21d1)
+                                                          0.08       3.76 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U62/ZN (oai21d1)
+                                                          0.19       3.95 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U233/ZN (aoi21d2)
+                                                          0.21       4.16 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/U232/ZN (oai21d2)
+                                                          0.24       4.40 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_8_1/CO (FDIV_0_DW01_add_167)
+                                                          0.00       4.40 r
+  EXEU_instance/ALU_instance/div_inst/U115/Z (buffd3)     0.12       4.52 r
+  EXEU_instance/ALU_instance/div_inst/U372/Z (buffd7)     0.10       4.62 r
+  EXEU_instance/ALU_instance/div_inst/U646/ZN (nd02d0)
+                                                          0.08       4.70 f
+  EXEU_instance/ALU_instance/div_inst/U349/ZN (nd02d7)
+                                                          0.26       4.96 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/A[8] (FDIV_0_DW01_add_103)
+                                                          0.00       4.96 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U358/ZN (inv0d0)
+                                                          0.11       5.07 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U468/ZN (nd12d1)
+                                                          0.16       5.23 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U359/ZN (oai21d1)
+                                                          0.26       5.49 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U284/ZN (oai22d2)
+                                                          0.23       5.72 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U459/ZN (oai21d1)
+                                                          0.20       5.92 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U287/ZN (nr02d1)
+                                                          0.08       6.00 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U296/ZN (nr02d2)
+                                                          0.12       6.12 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U316/ZN (nd03d1)
+                                                          0.07       6.19 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/U313/ZN (nd03d1)
+                                                          0.09       6.28 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_7_1/CO (FDIV_0_DW01_add_103)
+                                                          0.00       6.28 r
+  EXEU_instance/ALU_instance/div_inst/U941/ZN (aoi21d1)
+                                                          0.07       6.35 f
+  EXEU_instance/ALU_instance/div_inst/U437/ZN (oai21d4)
+                                                          0.30       6.65 r
+  EXEU_instance/ALU_instance/div_inst/U116/Z (an02d2)     0.22       6.87 r
+  EXEU_instance/ALU_instance/div_inst/U117/Z (bufbd7)     0.16       7.03 r
+  EXEU_instance/ALU_instance/div_inst/U566/Z (an02d1)     0.10       7.13 r
+  EXEU_instance/ALU_instance/div_inst/U611/ZN (nd12d4)
+                                                          0.29       7.42 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/A[3] (FDIV_0_DW01_add_111)
+                                                          0.00       7.42 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U278/ZN (inv0d2)
+                                                          0.04       7.46 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U482/ZN (nd12d1)
+                                                          0.13       7.59 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U480/ZN (oai21d1)
+                                                          0.20       7.79 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U478/ZN (nd12d1)
+                                                          0.14       7.93 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U320/ZN (nd02d2)
+                                                          0.08       8.02 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U279/ZN (inv0d1)
+                                                          0.06       8.08 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U342/ZN (nd03d1)
+                                                          0.08       8.16 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U316/ZN (nd12d2)
+                                                          0.16       8.32 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U319/ZN (nr02d2)
+                                                          0.04       8.37 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U318/ZN (nr02d2)
+                                                          0.12       8.48 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U282/ZN (nd03d2)
+                                                          0.08       8.56 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/U281/ZN (nd03d2)
+                                                          0.09       8.65 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_6_2/CO (FDIV_0_DW01_add_111)
+                                                          0.00       8.65 r
+  EXEU_instance/ALU_instance/div_inst/U492/ZN (invbd2)
+                                                          0.05       8.70 f
+  EXEU_instance/ALU_instance/div_inst/U1042/ZN (aoi21d1)
+                                                          0.17       8.87 r
+  EXEU_instance/ALU_instance/div_inst/U383/ZN (oai22d4)
+                                                          0.25       9.12 f
+  EXEU_instance/ALU_instance/div_inst/U421/ZN (inv0d4)
+                                                          0.07       9.18 r
+  EXEU_instance/ALU_instance/div_inst/U1047/ZN (nd02d1)
+                                                          0.07       9.26 f
+  EXEU_instance/ALU_instance/div_inst/U545/ZN (inv0d2)
+                                                          0.08       9.33 r
+  EXEU_instance/ALU_instance/div_inst/U494/ZN (invbd4)
+                                                          0.05       9.39 f
+  EXEU_instance/ALU_instance/div_inst/U562/ZN (inv0da)
+                                                          0.13       9.52 r
+  EXEU_instance/ALU_instance/div_inst/U1119/ZN (aoi22d1)
+                                                          0.07       9.59 f
+  EXEU_instance/ALU_instance/div_inst/U882/ZN (nd04d4)
+                                                          0.30       9.89 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/A[8] (FDIV_0_DW01_add_117)
+                                                          0.00       9.89 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U313/ZN (inv0d0)
+                                                          0.13      10.02 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U469/ZN (nd12d1)
+                                                          0.16      10.18 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U467/ZN (oai21d1)
+                                                          0.26      10.44 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U286/ZN (oai22d2)
+                                                          0.23      10.67 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U459/ZN (oai21d1)
+                                                          0.20      10.88 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U399/ZN (nr02d1)
+                                                          0.08      10.96 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U304/ZN (nr02d2)
+                                                          0.14      11.09 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U316/ZN (nd03d1)
+                                                          0.08      11.17 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/U300/ZN (nd13d1)
+                                                          0.07      11.25 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_5_1/CO (FDIV_0_DW01_add_117)
+                                                          0.00      11.25 r
+  EXEU_instance/ALU_instance/div_inst/U1138/ZN (aoi21d1)
+                                                          0.06      11.31 f
+  EXEU_instance/ALU_instance/div_inst/U357/ZN (oai22d4)
+                                                          0.29      11.59 r
+  EXEU_instance/ALU_instance/div_inst/U132/Z (an02d2)     0.24      11.83 r
+  EXEU_instance/ALU_instance/div_inst/U133/Z (bufbd7)     0.17      12.00 r
+  EXEU_instance/ALU_instance/div_inst/U616/ZN (nd02d2)
+                                                          0.04      12.04 f
+  EXEU_instance/ALU_instance/div_inst/U227/Z (an02d1)     0.13      12.17 f
+  EXEU_instance/ALU_instance/div_inst/U138/ZN (nd02d2)
+                                                          0.07      12.24 r
+  EXEU_instance/ALU_instance/div_inst/U137/Z (buffda)     0.13      12.36 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/A[3] (FDIV_0_DW01_add_125)
+                                                          0.00      12.36 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U278/ZN (inv0d2)
+                                                          0.03      12.40 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U479/ZN (nd12d1)
+                                                          0.13      12.52 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U477/ZN (oai21d1)
+                                                          0.20      12.73 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U475/ZN (nd12d1)
+                                                          0.14      12.87 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U318/ZN (nd02d2)
+                                                          0.08      12.95 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U331/ZN (inv0d0)
+                                                          0.13      13.08 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U350/ZN (nd03d1)
+                                                          0.09      13.17 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U320/ZN (nd12d2)
+                                                          0.16      13.33 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U300/ZN (nr02d2)
+                                                          0.03      13.37 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U349/ZN (nr02d1)
+                                                          0.16      13.52 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U297/ZN (nd03d1)
+                                                          0.08      13.60 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/U329/ZN (nd03d1)
+                                                          0.13      13.74 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_4_2/CO (FDIV_0_DW01_add_125)
+                                                          0.00      13.74 r
+  EXEU_instance/ALU_instance/div_inst/U317/ZN (inv0d2)
+                                                          0.05      13.78 f
+  EXEU_instance/ALU_instance/div_inst/U1237/ZN (aoi21d1)
+                                                          0.17      13.95 r
+  EXEU_instance/ALU_instance/div_inst/U891/ZN (oai22d4)
+                                                          0.25      14.20 f
+  EXEU_instance/ALU_instance/div_inst/U325/Z (an02d4)     0.15      14.35 f
+  EXEU_instance/ALU_instance/div_inst/U145/Z (buffda)     0.15      14.50 f
+  EXEU_instance/ALU_instance/div_inst/U1337/ZN (aoi222d1)
+                                                          0.29      14.79 r
+  EXEU_instance/ALU_instance/div_inst/U455/ZN (nd02d7)
+                                                          0.32      15.11 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/A[4] (FDIV_0_DW01_add_132)
+                                                          0.00      15.11 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U299/ZN (inv0d1)
+                                                          0.09      15.20 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U483/ZN (nd12d1)
+                                                          0.09      15.28 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U281/ZN (inv0d1)
+                                                          0.06      15.35 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U481/ZN (oai21d1)
+                                                          0.07      15.41 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U315/ZN (inv0d1)
+                                                          0.07      15.48 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U329/ZN (nd02d2)
+                                                          0.05      15.53 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U328/ZN (nd02d2)
+                                                          0.10      15.63 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U280/ZN (inv0d1)
+                                                          0.04      15.67 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U325/ZN (nd13d1)
+                                                          0.08      15.75 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U324/ZN (nd12d2)
+                                                          0.11      15.86 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U327/ZN (nr02d2)
+                                                          0.09      15.94 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U326/ZN (nr02d2)
+                                                          0.04      15.99 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U336/ZN (nd03d1)
+                                                          0.10      16.08 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/U283/ZN (nd03d2)
+                                                          0.09      16.17 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_3_2/CO (FDIV_0_DW01_add_132)
+                                                          0.00      16.17 f
+  EXEU_instance/ALU_instance/div_inst/U1344/ZN (aoi21d1)
+                                                          0.18      16.35 r
+  EXEU_instance/ALU_instance/div_inst/U890/ZN (oai22d4)
+                                                          0.26      16.61 f
+  EXEU_instance/ALU_instance/div_inst/U598/Z (an02d2)     0.19      16.80 f
+  EXEU_instance/ALU_instance/div_inst/U350/Z (buffd3)     0.20      17.00 f
+  EXEU_instance/ALU_instance/div_inst/U1409/ZN (aoi22d1)
+                                                          0.18      17.18 r
+  EXEU_instance/ALU_instance/div_inst/U392/ZN (nd04d4)
+                                                          0.33      17.51 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/A[11] (FDIV_0_DW01_add_161)
+                                                          0.00      17.51 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/U172/ZN (nr02d1)
+                                                          0.16      17.67 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/U169/ZN (oai21d1)
+                                                          0.11      17.78 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/U143/ZN (aoi21d1)
+                                                          0.26      18.04 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/U91/ZN (oai21d1)
+                                                          0.07      18.11 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/U250/ZN (aoi21d2)
+                                                          0.28      18.40 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/U249/ZN (oai21d4)
+                                                          0.23      18.63 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_2_4/CO (FDIV_0_DW01_add_161)
+                                                          0.00      18.63 f
+  EXEU_instance/ALU_instance/div_inst/U1442/ZN (inv0d2)
+                                                          0.09      18.72 r
+  EXEU_instance/ALU_instance/div_inst/U1445/ZN (aoi21d1)
+                                                          0.04      18.77 f
+  EXEU_instance/ALU_instance/div_inst/U876/ZN (oai22d4)
+                                                          0.32      19.09 r
+  EXEU_instance/ALU_instance/div_inst/U493/ZN (inv0d4)
+                                                          0.04      19.13 f
+  EXEU_instance/ALU_instance/div_inst/U224/Z (an02d1)     0.12      19.24 f
+  EXEU_instance/ALU_instance/div_inst/U176/ZN (inv0d2)
+                                                          0.09      19.34 r
+  EXEU_instance/ALU_instance/div_inst/U320/ZN (inv0da)
+                                                          0.09      19.43 f
+  EXEU_instance/ALU_instance/div_inst/U1537/ZN (aoi22d1)
+                                                          0.14      19.57 r
+  EXEU_instance/ALU_instance/div_inst/U888/ZN (nd04d4)
+                                                          0.33      19.90 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/A[6] (FDIV_0_DW01_add_146)
+                                                          0.00      19.90 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U291/ZN (inv0d0)
+                                                          0.21      20.11 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U486/ZN (nd12d1)
+                                                          0.11      20.23 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U298/ZN (inv0d2)
+                                                          0.07      20.29 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U483/ZN (oai21d1)
+                                                          0.06      20.35 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U354/Z (or02d0)
+                                                          0.14      20.50 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U302/Z (an02d1)
+                                                          0.13      20.62 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U316/ZN (nd12d2)
+                                                          0.19      20.82 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U279/ZN (nr02d2)
+                                                          0.10      20.92 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U285/ZN (nr02d2)
+                                                          0.04      20.96 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U282/ZN (nd03d1)
+                                                          0.08      21.03 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/U329/ZN (nd03d1)
+                                                          0.12      21.15 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_1_2/CO (FDIV_0_DW01_add_146)
+                                                          0.00      21.15 f
+  EXEU_instance/ALU_instance/div_inst/U1553/ZN (aoi21d1)
+                                                          0.19      21.34 r
+  EXEU_instance/ALU_instance/div_inst/U889/ZN (oai22d4)
+                                                          0.26      21.59 f
+  EXEU_instance/ALU_instance/div_inst/U294/Z (an02d4)     0.15      21.75 f
+  EXEU_instance/ALU_instance/div_inst/U336/Z (bufbd7)     0.12      21.87 f
+  EXEU_instance/ALU_instance/div_inst/U1653/ZN (aoi222d1)
+                                                          0.29      22.15 r
+  EXEU_instance/ALU_instance/div_inst/U478/ZN (nd02d7)
+                                                          0.30      22.46 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/A[3] (FDIV_0_DW01_add_168)
+                                                          0.00      22.46 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/U217/Z (or02d0)
+                                                          0.17      22.63 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/U220/ZN (oaim21d1)
+                                                          0.12      22.75 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/U187/ZN (aoi21d1)
+                                                          0.15      22.90 r
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/U154/ZN (oai21d1)
+                                                          0.07      22.97 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/U222/Z (aor21d1)
+                                                          0.17      23.14 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/U221/Z (aor21d1)
+                                                          0.21      23.35 f
+  EXEU_instance/ALU_instance/div_inst/div_39/u_div/u_add_PartRem_0_2/CO (FDIV_0_DW01_add_168)
+                                                          0.00      23.35 f
+  EXEU_instance/ALU_instance/div_inst/U1655/ZN (oai321d1)
+                                                          0.42      23.77 r
+  EXEU_instance/ALU_instance/div_inst/calculation_output_tri[1]/ZN (invtd2)
+                                                          0.04      23.81 f
+  EXEU_instance/ALU_instance/div_inst/calculation_output[1] (FDIV_0)
+                                                          0.00      23.81 f
+  EXEU_instance/ALU_instance/U681/ZN (aoi22d1)            0.17      23.98 r
+  EXEU_instance/ALU_instance/U120/ZN (nd03d2)             0.11      24.09 f
+  EXEU_instance/ALU_instance/calculation_output[1] (Arithmetic_Logic_Unit_FP)
+                                                          0.00      24.09 f
+  EXEU_instance/execution_output[1] (Execution_Unit_FP)
+                                                          0.00      24.09 f
+  ID_instance/forwarded_result_from_ALU[1] (Instruction_Decode_FP)
+                                                          0.00      24.09 f
+  ID_instance/U3783/ZN (aoi22d1)                          0.14      24.23 r
+  ID_instance/U37/ZN (oaim21d1)                           0.13      24.36 f
+  ID_instance/second_operand_value[1] (Instruction_Decode_FP)
+                                                          0.00      24.36 f
+  BRU_instance/second_operand[1] (Branch_Resolution_Unit)
+                                                          0.00      24.36 f
+  BRU_instance/U33/ZN (invbd2)                            0.06      24.41 r
+  BRU_instance/U255/ZN (oai22d1)                          0.08      24.50 f
+  BRU_instance/U259/ZN (oaim211d1)                        0.18      24.68 f
+  BRU_instance/U265/ZN (aoi21d1)                          0.17      24.84 r
+  BRU_instance/U288/ZN (aon211d1)                         0.10      24.95 f
+  BRU_instance/U289/ZN (oaim211d1)                        0.09      25.04 r
+  BRU_instance/U295/ZN (nd13d1)                           0.07      25.11 f
+  BRU_instance/U308/ZN (aoi31d1)                          0.15      25.26 r
+  BRU_instance/U313/ZN (oai31d1)                          0.09      25.35 f
+  BRU_instance/U314/ZN (oaim211d1)                        0.08      25.43 r
+  BRU_instance/U315/ZN (nd13d1)                           0.07      25.50 f
+  BRU_instance/U324/ZN (oaim211d1)                        0.10      25.60 r
+  BRU_instance/U57/ZN (nd02d2)                            0.07      25.67 f
+  BRU_instance/U39/ZN (oai311d4)                          0.29      25.96 r
+  BRU_instance/the_branch_is_taken (Branch_Resolution_Unit)
+                                                          0.00      25.96 r
+  IF_instance/branched_address_indicator (Instruction_Fetch_FP)
+                                                          0.00      25.96 r
+  IF_instance/U8/ZN (inv0d4)                              0.02      25.99 f
+  IF_instance/U12/ZN (nd02d2)                             0.14      26.13 r
+  IF_instance/U14/ZN (inv0d4)                             0.06      26.19 f
+  IF_instance/U9/Z (an12d4)                               0.15      26.33 f
+  IF_instance/U33/ZN (aoi211d1)                           0.19      26.52 r
+  IF_instance/U3/Z (mx02d2)                               0.14      26.66 r
+  IF_instance/U34/ZN (oaim21d1)                           0.04      26.71 f
+  IF_instance/pc_decision_making_reg[7]/D (dfnrq1)        0.00      26.71 f
+  data arrival time                                                 26.71
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  IF_instance/pc_decision_making_reg[7]/CP (dfnrq1)       0.00      10.00 r
+  library setup time                                     -0.10       9.90
+  data required time                                                 9.90
+  --------------------------------------------------------------------------
+  data required time                                                 9.90
+  data arrival time                                                -26.71
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                 -16.81
+
+
